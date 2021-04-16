@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/hud_frame">
+    <LinearLayout style="@style/hud_header" />
+    <RelativeLayout style="@style/hud_pane">
+        <LinearLayout
+            style="@style/hud_action"
+            android:id="@+id/action"
+            >
+            <ImageView
+                style="@style/hud_action_icon"
+                android:src="@drawable/ic_wt_6000"
+                />
+            <TextView
+                style="@style/hud_action_text"
+                android:text="@string/interruption_action"
+                />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/hud_detail"
+            android:layout_above="@id/action"
+            >
+            <TextView
+                style="@style/hud_detail_text"
+                android:id="@+id/detail_text"
+                android:textSize="@dimen/hud_detail_textsize"
+                android:text="@string/interruption_text"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

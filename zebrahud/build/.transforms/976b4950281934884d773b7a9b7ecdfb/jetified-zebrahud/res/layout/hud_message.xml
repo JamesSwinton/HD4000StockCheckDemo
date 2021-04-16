@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/hud_back">
+
+    <LinearLayout style="@style/hud_frame">
+
+        <LinearLayout style="@style/hud_header">
+
+            <TextView
+                android:id="@+id/header_text"
+                style="@style/hud_header_text" />
+        </LinearLayout>
+
+        <RelativeLayout style="@style/hud_pane">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/message_text"
+                style="@style/hud_autosize_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/hud_action_text_pad" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

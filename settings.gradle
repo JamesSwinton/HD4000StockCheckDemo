@@ -1,0 +1,3 @@
+include ':zebrahud'
+include ':app'
+rootProject.name = "HUDStockCheckDemo"

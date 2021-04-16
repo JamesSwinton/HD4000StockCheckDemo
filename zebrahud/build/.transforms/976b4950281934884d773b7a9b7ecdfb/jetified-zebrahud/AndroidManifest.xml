@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.symbol.zebrahud"
+    android:versionCode="210106071"
+    android:versionName="1.0.210106071" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="29" />
+
+    <!-- For watching for HUD connect and disconnect -->
+    <uses-permission android:name="android.permission.USB_PERMISSION" />
+
+    <!-- For Hudcasting and Hud screen capture -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context=".MainActivity">
+
+  <LinearLayout
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    android:background="@color/zebra_blue">
+
+    <ImageView
+      android:id="@+id/text_frame"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="7"/>
+
+     <LinearLayout
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:layout_weight="3">
+
+       <ImageView
+         android:id="@+id/status_icon"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="5"
+         android:src="@drawable/ic_info"/>
+
+       <TextView
+         android:id="@+id/product_text"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="5"
+         android:gravity="center"
+         android:textSize="8pt"
+         android:textStyle="bold"
+         android:textColor="@color/white"
+         tools:text="6pt Milk" />
+
+       <TextView
+         android:id="@+id/status_text"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="5"
+         android:gravity="center"
+         android:textSize="8pt"
+         android:textStyle="bold"
+         android:textColor="@color/white"
+         android:text="Waiting for barcode..." />
+
+     </LinearLayout>
+
+  </LinearLayout>
+</layout>
