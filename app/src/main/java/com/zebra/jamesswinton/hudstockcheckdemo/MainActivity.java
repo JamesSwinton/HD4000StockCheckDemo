@@ -69,35 +69,6 @@ public class MainActivity extends AppCompatActivity implements ZebraHud.EventLis
         super.onCreate(savedInstanceState);
         mDataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        if (mZebraHud.isConnected()) {
-            // Get Resolutions (ordered from smallest to largest)
-            List<ZebraHud.HudCameraResolution> hudResolutions = mZebraHud.getCameraAllResolutions();
-
-            // Set Resolution
-            mZebraHud.setCameraCurrentResolution(hudResolutions.get(0));
-
-            // Get Frame Rates
-            int[] camera720pFrameRates = ZebraHud.ListCamera720pFramerates;
-
-            // Set Frame Rate
-            if (mZebraHud.getCameraCurrentResolution().width == 720) {
-                int max720pFrameRate = camera720pFrameRates[camera720pFrameRates.length - 1];
-                mZebraHud.setCamera720pFramerate(max720pFrameRate);
-            }
-
-            // Get Max Zoom
-            for (ZebraHud.HudCameraResolution cameraResolution : hudResolutions) {
-                int maxZoom = cameraResolution.maxZoom;
-            }
-
-            // Set Zoom
-            mZebraHud.setCameraZoom(mZebraHud.getCameraCurrentResolution().maxZoom);
-        }
-
-        mZebraHud.startCameraCapture();
-
-
-
         // Init TextRecognizer
         mTextRecognizer = TextRecognition.getClient();
 
